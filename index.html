@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedaje La Victoria | Descanso y Comodidad</title>
+    <!-- Google Fonts: Inter para máxima legibilidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para los íconos (mapa, cama, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="logo">
+                <i class="fa-solid fa-bed"></i> Hospedaje La Victoria
+            </div>
+            <h1>Bienvenido a tu parada ideal</h1>
+            <p>Hospedaje cómodo y seguro, diseñado para agilizar el descanso de los profesionales del transporte y viajeros ocasionales.</p>
+            <div class="amenities-badges">
+                <span><i class="fa-solid fa-square-parking"></i> Parqueadero Vigilado</span>
+                <span><i class="fa-solid fa-store"></i> Tienda dentro del hospedaje</span>
+                <span><i class="fa-solid fa-user-shield"></i> Exclusivo Adultos</span>
+            </div>
+            <a href="#reserva" class="btn-primary">Reservar Ahora <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section" id="habitaciones">
+        <div class="container">
+            <h2 class="section-title">Nuestras Habitaciones</h2>
+            <p class="section-subtitle">Espacios diseñados para tu total descanso después de una larga jornada.</p>
+
+            <div class="rooms-grid">
+                <!-- Habitación Sencilla -->
+                <div class="room-card">
+                    <div class="room-image sencilla">
+                        <!-- Imagen representativa por CSS Background -->
+                    </div>
+                    <div class="room-details">
+                        <h3>Habitación Sencilla</h3>
+                        <p class="room-desc">Ideal para viajeros individuales o de paso. Confort asegurado para recargar energías antes de continuar tu labor.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-bed"></i> 1 Cama Confortable</li>
+                            <li><i class="fa-solid fa-tv"></i> TV por Cable</li>
+                            <li><i class="fa-solid fa-wifi"></i> WiFi Rápido</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Habitación Doble -->
+                <div class="room-card">
+                    <div class="room-image doble">
+                        <!-- Imagen representativa por CSS Background -->
+                    </div>
+                    <div class="room-details">
+                        <h3>Habitación Doble</h3>
+                        <p class="room-desc">Espaciosa y práctica, pensada para compañeros de viaje, de trabajo o asistencia a eventos locales.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-bed"></i> 2 Camas</li>
+                            <li><i class="fa-solid fa-tv"></i> TV por Cable</li>
+                            <li><i class="fa-solid fa-wifi"></i> WiFi Rápido y Seguro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="reserva">
+        <div class="container">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h2><i class="fa-solid fa-calendar-check"></i> Planifica tu Estancia</h2>
+                    <p>Completa este sencillo formulario y te confirmaremos en minutos vía WhatsApp.</p>
+                    <div class="adults-only-notice">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Recuerda: Nuestro hospedaje es <strong>exclusivo para adultos</strong> (transportistas y viajeros en Tuluá).
+                    </div>
+                </div>
+                
+                <form id="booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="fullName">Nombre Completo</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="fullName" placeholder="Ej: Juan Pérez" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkIn">Fecha de Entrada</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" id="checkIn" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="parking">¿Parqueadero Mula/Camión?</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-truck"></i>
+                                <select id="parking" required>
+                                    <option value="" disabled selected>Selecciona...</option>
+                                    <option value="Sí, mula">Sí, mula</option>
+                                    <option value="Sí, camión">Sí, camión</option>
+                                    <option value="No preciso">No preciso</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="roomType">Tipo de Habitación Deseada</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-door-open"></i>
+                            <select id="roomType" required>
+                                <option value="" disabled selected>Selecciona un tipo...</option>
+                                <option value="Sencilla">Habitación Sencilla</option>
+                                <option value="Doble">Habitación Doble</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="roomNumber">Seleccionar Número de Habitación</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <select id="roomNumber" required>
+                                <option value="" disabled selected>Cargando opciones...</option>
+                                <!-- JS insertará del 1 al 25 y excluirá el 4 y 14 -->
+                            </select>
+                        </div>
+                        <small class="hint">Las habitaciones 4 y 14 están excluidas del listado de reservas.</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Confirmar Reserva por WhatsApp <i class="fa-brands fa-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Hospedaje La Victoria - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
